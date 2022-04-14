@@ -10,7 +10,7 @@ const SearchPhotos = () => {
     const [pics, setPics] = useState([]);
 
     const searchPhotos = async(e) => {
-        e.preventDefault();
+        e.preventDefault(); // to not everytime load the entire page after clicking on search use preventDefault 
         unsplash.search.photos(query)
             .then(toJson)
             .then((json) => {
